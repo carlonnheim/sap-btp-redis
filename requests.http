@@ -1,0 +1,9 @@
+### Set key
+POST http://localhost:4000/mykey
+Content-Type: application/json
+
+{"my": "test"}
+
+### Get key
+GET http://localhost:4000/mykey
+Accept: application/json

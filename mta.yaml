@@ -1,0 +1,29 @@
+_schema-version: "3.2"
+ID: sap-btp-redis
+version: 0.1.0
+
+modules:
+- name: sap-btp-redis-nonclustered
+  type: nodejs
+  path: src
+  requires:
+    - name: redis-free
+- name: sap-btp-redis-clustered
+  type: nodejs
+  path: src
+  requires:
+    - name: redis-standard
+
+resources:
+- name: redis-free
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: redis-cache
+    service-name: redis-free
+    service-plan: free
+- name: redis-standard
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: redis-cache
+    service-name: redis-standard
+    service-plan: standard

@@ -1,0 +1,19 @@
+{
+    "name": "sap-btp-redis",
+    "version": "0.1.0",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "@sap/xsenv": "^5.3.0",
+        "express": "^4.21.1",
+        "redis": "^4.7.0"
+    },
+    "engines": {
+        "node": "18.x"
+    }
+}
